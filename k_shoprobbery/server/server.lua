@@ -23,7 +23,7 @@ end)
 
 RegisterNetEvent('cheater', function()
     local webhook = 'twojwebhook'
-    -- DropPlayer(source, 'Nie uzywaj cheatów!')
+    DropPlayer(source, 'Nie uzywaj cheatów!')
     sendwebhook(webhook, 7471541, 'k_shoprobbery', "**Gracz:**  " .. GetPlayerName(source) .. "\nPrawdopodobnie używa cheatów!")
 end)
 
