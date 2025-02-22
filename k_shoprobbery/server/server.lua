@@ -22,7 +22,7 @@ RegisterNetEvent('takemoney', function()
 end)
 
 RegisterNetEvent('cheater', function()
-    local webhook = 'https://discord.com/api/webhooks/1334616278362755215/J-BRQeFwjzc8AH5elIGySvL3BzkJLYQndCYkS2ndutgGDXt0Cr6JC3Osze031GC2Bs3O'
+    local webhook = 'twojwebhook'
     -- DropPlayer(source, 'Nie uzywaj cheatów!')
     sendwebhook(webhook, 7471541, 'k_shoprobbery', "**Gracz:**  " .. GetPlayerName(source) .. "\nPrawdopodobnie używa cheatów!")
 end)
