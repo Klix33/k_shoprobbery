@@ -59,7 +59,6 @@ end)
 RegisterNetEvent('cheater', function()
     local webhook = 'twoj webhook'
     DropPlayer(source, 'Nie uzywaj cheatów!')
-    TriggerClientEvent('esx:showNotification', source, 'Cheater')
     sendwebhook(webhook, 7471541, 'k_shoprobbery', "**Gracz:**  " .. GetPlayerName(source) .. "\nPrawdopodobnie używa cheatów!")
 end)
 function sendwebhook(webhook, color, name, message)
