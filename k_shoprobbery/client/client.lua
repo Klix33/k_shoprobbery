@@ -41,6 +41,8 @@ RegisterNetEvent('Start_robbery', function()
     local playerPed = PlayerPedId()
     local playerhasweapon = GetSelectedPedWeapon(playerPed)
 
+    
+
     if currentTime - lastRobberyTime < Config.cooldown then
         ESX.ShowNotification('To miejsce zostało niedawno obrabowane!')
         return 
@@ -52,9 +54,9 @@ RegisterNetEvent('Start_robbery', function()
             local isNearKasetka = false
             local playerPosition = GetEntityCoords(playerPed)
             for _, kasetka in ipairs(Config.kasetki) do
-                local distance = #(playerPosition - kasetka.coords)
+            local distance = #(playerPosition - kasetka.coords)
         
-                if distance < 6 then 
+                if distance < 10 then 
                     isNearKasetka = true
                     break 
                 end
@@ -66,10 +68,12 @@ RegisterNetEvent('Start_robbery', function()
                 return
             end
 
+          
+
     ESX.TriggerServerCallback('checkpolice', function(policeOnline)
     if policeOnline then
         if playerhasweapon ~= GetHashKey("weapon_unarmed") then
-        local success = lib.skillCheck('medium', {'1', '2', '3', '4'})
+        local success = lib.skillCheck('easy', {'1', '2', '3', '4'})
         if success then
             if lib.progressBar({ 
                 duration = Config.durationprogbar,
